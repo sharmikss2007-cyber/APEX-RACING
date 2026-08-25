@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Barlow Condensed', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+    --font-telemetry: 'JetBrains Mono', monospace;
+    --font-subheading: 'Rajdhani', sans-serif;
+  }
+
+  body {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    background-color: #050505;
+    color: #ffffff;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  .font-telemetry {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .font-subheading {
+    font-family: 'Rajdhani', sans-serif;
+  }
+}
+
+/* Immersive atmospheric radial lighting */
+.bg-immersive-radial {
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(225, 6, 0, 0.22) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(34, 34, 34, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 50% 10%, rgba(225, 6, 0, 0.12) 0%, transparent 35%);
+}
+
+.bg-radial-red-glow {
+  background-image: radial-gradient(circle at center, rgba(225, 6, 0, 0.25) 0%, transparent 70%);
+}
+
+/* Carbon fiber background pattern */
+.bg-carbon {
+  background-color: #050505;
+  background-image: 
+    radial-gradient(#14151a 15%, transparent 16%),
+    radial-gradient(#14151a 15%, transparent 16%);
+  background-size: 12px 12px;
+  background-position: 0 0, 6px 6px;
+}
+
+.bg-carbon-dense {
+  background: 
+    linear-gradient(27deg, #0e1014 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #0e1014 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #14161d 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #14161d 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #090a0d 10px, transparent 10px),
+    linear-gradient(#08090c 25%, #050505 25%, #050505 50%, transparent 50%, transparent 75%, #101217 75%, #101217);
+  background-color: #050505;
+  background-size: 20px 20px;
+}
+
+/* Racing stripe and telemetry accents */
+.racing-grid {
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.racing-glow-red {
+  box-shadow: 0 0 40px -5px rgba(225, 6, 0, 0.45);
+}
+
+.racing-glow-cyan {
+  box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.3);
+}
+
+/* Immersive Glassmorphism */
+.glass-panel {
+  background: rgba(10, 10, 15, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(18, 20, 28, 0.85);
+  border-color: rgba(225, 6, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Custom motorsport scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f222e;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e10600;
+}
+
+/* Slanted racing cuts & Immersive Skew helpers */
+.skew-racing {
+  transform: skewX(-12deg);
+}
+
+.skew-racing-sm {
+  transform: skewX(-6deg);
+}
+
+.skew-racing-card {
+  transform: skewX(-4deg);
+}
+
+.unskew-racing {
+  transform: skewX(12deg);
+}
+
+.unskew-racing-sm {
+  transform: skewX(6deg);
+}
+
+.unskew-racing-card {
+  transform: skewX(4deg);
+}
+
+.clip-slant {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+
+.clip-slant-sm {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.clip-racing-badge {
+  clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+}
+
+

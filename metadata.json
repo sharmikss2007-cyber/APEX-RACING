@@ -1,0 +1,6 @@
+{
+  "name": "Apex Racing Championship",
+  "description": "The official digital platform for the APEX Racing Championship featuring live race simulations, championship standings, driver profiles, interactive car configurator, and race control telemetry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
